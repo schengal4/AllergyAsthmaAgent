@@ -6,8 +6,10 @@ from streamlit_chat import message
 
 st.set_page_config(page_title="ChatGPT", layout="centered", initial_sidebar_state="auto",)
 
-st.title('ChatGPT 4.0 Turbo Vision Preview')
-st.write('128,000 token context window. Ability to understand images. Returns a maximum of 4,096 output tokens.')
+st.title('TANGO2 Deficiency Agent')
+st.write('Hello, I am a GPT-4 powered medical assistant specialized in TANGO2 deficiency. I can provide information and support for both patients and physicians. TANGO2 deficiency is a rare genetic disorder with symptoms including developmental delay, intellectual disability, gait incoordination, speech difficulties, seizures, and hypothyroidism. Patients may experience TANGO2 spells, characterized by sudden worsening of symptoms like hypotonia, ataxia, head and body tilt, increased dysarthria, drooling, lethargy, and disorientation. This condition also poses risks for acute metabolic crises, which can be life-threatening, involving rhabdomyolysis, elevated creatine phosphokinase, liver transaminases abnormalities, hypoglycemia, EKG changes like prolonged QTc, ventricular arrhythmias, and cardiomyopathy.
+
+Please feel free to ask me any questions regarding the symptoms, diagnosis, management, and treatment of TANGO2 deficiency. I can provide information on current research, guidelines, and best practices for managing this condition. Additionally, I can offer support in understanding test results, medication options, lifestyle adjustments, and strategies for coping with the disorder. However, remember that my advice is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your physician or other qualified health provider with any questions you may have regarding a medical condition.')
 
 openai.api_key = os.environ.get('OPENAI-KEY')
 
