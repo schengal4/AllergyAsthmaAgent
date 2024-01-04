@@ -4,6 +4,9 @@ import openai
 import pandas as pd
 from streamlit_chat import message
 
+with open( "style.css" ) as css:
+    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
+
 st.set_page_config(page_title="ChatGPT", layout="centered", initial_sidebar_state="auto",)
 
 st.title("TANGO2 Deficiency Agent")
