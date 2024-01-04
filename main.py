@@ -7,9 +7,6 @@ from streamlit_chat import message
 
 st.set_page_config(page_title="ChatGPT", layout="centered", initial_sidebar_state="auto",)
 
-with open( "style.css" ) as css:
-    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
-
 st.title("TANGO2 Deficiency Agent")
 st.sidebar.write("Hello, I am a LLM powered medical assistant specialized in TANGO2 deficiency. I can provide information and support for both patients and physicians. TANGO2 deficiency is a rare genetic disorder with symptoms including developmental delay, intellectual disability, gait incoordination, speech difficulties, seizures, and hypothyroidism.")
 st.sidebar.write("I can provide information on current research, guidelines, and best practices for managing this condition. Additionally, I can offer support in understanding test results, medication options, lifestyle adjustments, and strategies for coping with the disorder.")
