@@ -15,7 +15,7 @@ st.sidebar.write("I can provide information on current research, guidelines, and
 st.sidebar.write("My advice is not a substitute for professional medical advice, diagnosis, or treatment.")
 st.sidebar.write("By Health Universe 2023.")
 
-openai.api_key = os.environ.get('OPENAI_API_KEY')
+openai.api_key = os.environ.get('OPENAI-KEY')
 
 CONTENT = open('resources/system_prompt.txt', 'r').read()
 
