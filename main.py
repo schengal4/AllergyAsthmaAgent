@@ -4,6 +4,9 @@ import openai
 import pandas as pd
 from streamlit_chat import message
 
+
+st.set_page_config(page_title="ChatGPT", layout="centered", initial_sidebar_state="auto",)
+
 with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
