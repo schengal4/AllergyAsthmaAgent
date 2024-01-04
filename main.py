@@ -32,7 +32,8 @@ def get_response():
         stream=True,
     ):
         full_response += response.choices[0].delta.get("content", "")
-    message_placeholder.markdown(full_response)
+        msg_placeholder.markdown(full_response + "▌")
+    msg_placeholder.markdown(full_response)
     return full_response
 
 def main():
@@ -56,7 +57,8 @@ def main():
 
         # response
         with st.chat_message("assistant"):
-            full_response = get_response()
+            message_placeholder = st.empty()
+            full_response = get_response(message_placeholder)
         st.session_state.messages.append({"role": "assistant", "content": full_response})
 
 if __name__ == "__main__":
