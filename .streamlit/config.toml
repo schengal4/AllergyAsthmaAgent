@@ -3,7 +3,7 @@
 # Learn more at: https://blog.streamlit.io/introducing-theming/
 
 # Primary accent for interactive elements
-primaryColor = '#7438c3'
+primaryColor = '#3cb878'
 
 # Background color for the main content area
 backgroundColor="#f0f0f5"
