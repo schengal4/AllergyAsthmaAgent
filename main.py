@@ -11,9 +11,9 @@ with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 st.title("TANGO2 Deficiency Agent")
-st.sidebar.write("Hello, I am a LLM powered medical assistant specialized in TANGO2 deficiency. I can provide information and support for both patients and physicians. TANGO2 deficiency is a rare genetic disorder with symptoms including developmental delay, intellectual disability, gait incoordination, speech difficulties, seizures, and hypothyroidism.")
-st.sidebar.write("I can provide information on current research, guidelines, and best practices for managing this condition. Additionally, I can offer support in understanding test results, medication options, lifestyle adjustments, and strategies for coping with the disorder.")
-st.sidebar.write("However, remember that my advice is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your physician or other qualified health provider with any questions you may have regarding a medical condition.")
+st.sidebar.write("Hello, I am a LLM powered medical assistant specialized in Allergy and Asthma. I can provide information and support for primary care physicians seeking to help patients presenting with allergy and asthma conditions.")
+st.sidebar.write("I can provide information on current research, guidelines, and best practices. ")
+st.sidebar.write("My advice is not a substitute for professional medical advice, diagnosis, or treatment.")
 st.sidebar.write("By Health Universe 2023.")
 
 openai.api_key = os.environ.get('OPENAI-KEY')
