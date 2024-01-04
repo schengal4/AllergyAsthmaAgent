@@ -1,8 +1,7 @@
 import streamlit as st
 import os 
 import openai
-import pandas as pd
-from streamlit_chat import message
+
 
 
 st.set_page_config(page_title="ChatGPT", layout="centered", initial_sidebar_state="auto",)
@@ -16,15 +15,14 @@ st.sidebar.write("I can provide information on current research, guidelines, and
 st.sidebar.write("My advice is not a substitute for professional medical advice, diagnosis, or treatment.")
 st.sidebar.write("By Health Universe 2023.")
 
-openai.api_key = os.environ.get('OPENAI-KEY')
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 CONTENT = open('resources/system_prompt.txt', 'r').read()
 
 def get_response():
-    message_placeholder = st.empty()
+    msg_placeholder = st.empty()
     full_response = ""
     messages = [{"role": "system", "content": CONTENT}] + [{"role": m["role"], "content": m["content"]} for m in st.session_state.messages]
-    st.session_state["app"] = messages[-1]['content']
     
     for response in openai.ChatCompletion.create(
         model=st.session_state["openai_model"],
@@ -57,8 +55,7 @@ def main():
 
         # response
         with st.chat_message("assistant"):
-            message_placeholder = st.empty()
-            full_response = get_response(message_placeholder)
+            full_response = get_response()
         st.session_state.messages.append({"role": "assistant", "content": full_response})
 
 if __name__ == "__main__":
