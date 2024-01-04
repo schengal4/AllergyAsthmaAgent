@@ -10,7 +10,7 @@ st.set_page_config(page_title="ChatGPT", layout="centered", initial_sidebar_stat
 with open( "style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
-st.title("TANGO2 Deficiency Agent")
+st.title("Allergy and Asthma Agent")
 st.sidebar.write("Hello, I am a LLM powered medical assistant specialized in Allergy and Asthma. I can provide information and support for primary care physicians seeking to help patients presenting with allergy and asthma conditions.")
 st.sidebar.write("I can provide information on current research, guidelines, and best practices. ")
 st.sidebar.write("My advice is not a substitute for professional medical advice, diagnosis, or treatment.")
